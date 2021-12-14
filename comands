@@ -1,0 +1,17 @@
+Unistall MySQL Linux
+sudo apt-get remove --purge 'mysql*'
+
+docker-compose -f docker-compose.yml up
+
+
+#How to Stop All Docker Containers
+docker kill $(docker ps -q)
+
+#How to Remove All Docker Containers
+docker rm $(docker ps -a -q)
+
+# Bash Mysql Docker
+ docker exec -it mysql /bin/bash
+ 
+ #
+ mysql -u root -p 
