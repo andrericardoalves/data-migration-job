@@ -2,6 +2,8 @@ package com.datamigration.domain;
 
 import java.util.Date;
 
+import org.apache.logging.log4j.util.Strings;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,4 +21,8 @@ public class Person {
 	private Date birthday;
 	private Integer age;
 	
+	
+	public boolean isValid() {
+		return !Strings.isBlank(name) && !Strings.isBlank(email) && birthday != null;
+	}
 }
